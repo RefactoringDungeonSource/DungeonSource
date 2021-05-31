@@ -16,7 +16,7 @@ public class Dragon extends Monster
 
 	public void attack(DungeonCharacter opponent)
 	{
-		System.out.println(CharacterValues.getName() + " breathes fire at " +
+		System.out.println(CharacterValues.getName() + " slowly swings a club toward's " +
 							opponent.CharacterValues.getName() + ":");
 		super.attack(opponent);
 
