@@ -27,15 +27,15 @@ public class Paladin extends Hero
 	    }//end constructor
 
 //-----------------------------------------------------------------
-	public void increaseHitPoints()
+	public void increaseHealth()
     {
-	    int hPoints;
+	    int health;
 
-		hPoints = (int)(Math.random() * (MAX_ADD - MIN_ADD + 1)) + MIN_ADD;
-		addHitPoints(hPoints);
-		System.out.println(CharacterValues.getName() + " added [" + hPoints + "] points.\n"
+	    health = (int)(Math.random() * (MAX_ADD - MIN_ADD + 1)) + MIN_ADD;
+		addhealth(health);
+		System.out.println(CharacterValues.getName() + " added [" + health + "] points.\n"
 							+ "Total hit points remaining are: "
-							+ CharacterValues.hitPoints);
+							+ CharacterValues.health);
 		 System.out.println();
 
     }//end increaseHitPoints method
@@ -57,7 +57,7 @@ public class Paladin extends Hero
 		do
 		{
 		    System.out.println("1. Attack Opponent");
-		    System.out.println("2. Increase Hit Points");
+		    System.out.println("2. Increase Health");
 		    System.out.print("Choose an option: ");
 		    choice = Keyboard.readInt();
 
@@ -65,7 +65,7 @@ public class Paladin extends Hero
 		    {
 			    case 1: attack(opponent);
 			        break;
-			    case 2: increaseHitPoints();
+			    case 2: increaseHealth();
 			        break;
 			    default:
 			        System.out.println("invalid choice!");
@@ -75,7 +75,7 @@ public class Paladin extends Hero
 		    if (numTurns > 0)
 			    System.out.println("Number of turns remaining is: " + numTurns);
 
-		} while(numTurns > 0 && CharacterValues.hitPoints > 0 && opponent.CharacterValues.getHitPoints() > 0);
+		} while(numTurns > 0 && CharacterValues.health > 0 && opponent.CharacterValues.getHealth() > 0);
 
     }//end overridden method
 

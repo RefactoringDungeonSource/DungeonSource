@@ -13,12 +13,12 @@
  *                for more than one attack per round of battle
  *
  *  class methods (all are public):
- *    public Hero(String name, int hitPoints, int attackSpeed,
+ *    public Hero(String name, int health, int attackSpeed,
 				     double chanceToHit, int damageMin, int damageMax,
 					 double chanceToBlock)
 	  public void readName()
 	  public boolean defend()
-	  public void subtractHitPoints(int hitPoints)
+	  public void subtracthealth(int health)
 	  public void battleChoices(DungeonCharacter opponent)
 
  * Copyright:    Copyright (c) 2001
@@ -35,11 +35,11 @@ public abstract class Hero extends DungeonCharacter
 
 //-----------------------------------------------------------------
 //calls base constructor and gets name of hero from user
-  public Hero(String name, int hitPoints, int attackSpeed,
+  public Hero(String name, int health, int attackSpeed,
 				     double chanceToHit, int damageMin, int damageMax,
 					 double chanceToBlock)
   {
-	super(name, hitPoints, attackSpeed, chanceToHit, damageMin, damageMax);
+	super(name, health, attackSpeed, chanceToHit, damageMin, damageMax);
 	this.chanceToBlock = chanceToBlock;
 	readName();
   }
@@ -66,7 +66,7 @@ Receives: nothing
 Returns: true if attack is blocked, false otherwise
 
 This method calls: Math.random()
-This method is called by: subtractHitPoints()
+This method is called by: subtracthealth()
 ---------------------------------------------------------*/
   public boolean defend()
   {
@@ -75,7 +75,7 @@ This method is called by: subtractHitPoints()
   }//end defend method
 
 /*-------------------------------------------------------
-subtractHitPoints checks to see if hero blocked attack, if so a message
+subtracthealth checks to see if hero blocked attack, if so a message
 is displayed, otherwise base version of this method is invoked to
 perform the subtraction operation.  This method overrides the method
 inherited from DungeonCharacter promoting polymorphic behavior
@@ -86,15 +86,15 @@ Returns: nothing
 This method calls: defend() or base version of method
 This method is called by: attack() from base class
 ---------------------------------------------------------*/
-public void subtractHitPoints(int hitPoints)
+public void subtractHealth(int health)
 	{
-		if (defend())
+		if (defend())	
 		{
 			System.out.println(CharacterValues.getName() + " BLOCKED the attack!");
 		}
 		else
 		{
-			super.subtractHitPoints(hitPoints);
+			super.subtractHealth(health);
 		}
 
 

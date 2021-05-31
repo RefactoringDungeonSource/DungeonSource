@@ -16,10 +16,10 @@ public class Rogue extends Hero
 	{
 		if (Math.random() <= .4)
 		{
-			int blowPoints = (int)(Math.random() * 76) + 100;
-			System.out.println(CharacterValues.getName() + " lands a thrusting stab for " + blowPoints
+			int crushingBlowChance = (int)(Math.random() * 76) + 100;
+			System.out.println(CharacterValues.getName() + " lands a thrusting stab for " + crushingBlowChance
 								+ " damage!");
-			opponent.subtractHitPoints(blowPoints);
+			opponent.subtractHealth(crushingBlowChance);
 		}//end blow succeeded
 		else
 		{
