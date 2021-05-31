@@ -25,7 +25,7 @@ public class Hunter extends Hero
 		double surprise = Math.random();
 		if (surprise <= .4)
 		{
-			System.out.println("Surprise bow shot was successful!\n" +
+			System.out.println("You pet was successful in his attack!\n" +
 					CharacterValues.getName() + " gets an additional turn.");
 			numTurns++;
 			attack(opponent);
@@ -51,7 +51,7 @@ public class Hunter extends Hero
 		do
 		{
 		    System.out.println("1. Attack Opponent");
-		    System.out.println("2. Surprise Attack");
+		    System.out.println("2. Pet Attack");
 		    System.out.print("Choose an option: ");
 		    choice = Keyboard.readInt();
 
