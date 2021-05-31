@@ -3,8 +3,6 @@
 /**
  * Title: DungeonCharacter.java
  *
- * <<<<<<<<<<<<<<<TEST>>>>>>>>>>>>>>>>
- * 
  * Description: Abstract Base class for inheritance hierarchy for a
  *              role playing game
  *
