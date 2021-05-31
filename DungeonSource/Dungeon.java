@@ -137,8 +137,8 @@ user has the option of quitting.
 	public static void battle(Hero theHero, Monster theMonster)
 	{
 		char pause = 'p';
-		System.out.println(theHero.getName() + " battles " +
-							theMonster.getName());
+		System.out.println(theHero.CharacterValues.getName() + " battles " +
+							theMonster.CharacterValues.getName());
 		System.out.println("---------------------------------------------");
 
 		//do battle
@@ -158,9 +158,9 @@ user has the option of quitting.
 		}//end battle loop
 
 		if (!theMonster.isAlive())
-		    System.out.println(theHero.getName() + " was victorious!");
+		    System.out.println(theHero.CharacterValues.getName() + " was victorious!");
 		else if (!theHero.isAlive())
-			System.out.println(theHero.getName() + " was defeated :-(");
+			System.out.println(theHero.CharacterValues.getName() + " was defeated :-(");
 		else//both are alive so user quit the game
 			System.out.println("Quitters never win ;-)");
 
