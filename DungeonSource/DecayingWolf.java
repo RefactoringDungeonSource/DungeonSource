@@ -9,12 +9,12 @@
  * @version 1.0
  */
 
-public class Skeleton extends Monster
+public class DecayingWolf extends Monster
 {
 
-    public Skeleton()
+    public DecayingWolf()
 	{
-		super("Sargath the Skeleton", 100, 3, .8, .3, 30, 50, 30, 50);
+		super("Fang the decaying wolf", 100, 3, .8, .3, 30, 50, 30, 50);
 
     }//end constructor
 
@@ -27,4 +27,4 @@ public class Skeleton extends Monster
 	}//end override of attack
 
 
-}//end class Skeleton
+}//end class DecayingWolf

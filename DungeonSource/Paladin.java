@@ -11,18 +11,20 @@
 
 
 
-public class Sorceress extends Hero
+public class Paladin extends Hero
 {
 	public final int MIN_ADD = 25;
 	public final int MAX_ADD = 50;
 
 //-----------------------------------------------------------------
-    public Sorceress()
-	{
-		super("Sorceress", 75, 5, .7, 25, 50, .3);
+
+	    public Paladin()
+		{
+
+			super("Paladin", 175, 4, .5, 15, 30, .5);
 
 
-    }//end constructor
+	    }//end constructor
 
 //-----------------------------------------------------------------
 	public void increaseHitPoints()
@@ -41,7 +43,7 @@ public class Sorceress extends Hero
 //-----------------------------------------------------------------
 	public void attack(DungeonCharacter opponent)
 	{
-		System.out.println(CharacterValues.getName() + " casts a spell of fireball at " +
+		System.out.println(CharacterValues.getName() + " casts holy light at " +
 							opponent.CharacterValues.getName() + ":");
 		super.attack(opponent);
 	}//end override of attack method

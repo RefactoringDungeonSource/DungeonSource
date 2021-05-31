@@ -79,14 +79,14 @@ this task
 
 		switch(choice)
 		{
-			case 1: return new Warrior();
+			case 1: return new Rogue();
 
-			case 2: return new Sorceress();
+			case 2: return new Paladin();
 
-			case 3: return new Thief();
+			case 3: return new Hunter();
 
 			default: System.out.println("invalid choice, returning Thief");
-				     return new Thief();
+				     return new Hunter();
 		}//end switch
 	}//end chooseHero method
 

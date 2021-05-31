@@ -1,20 +1,10 @@
 
-
-/**
- * Title:
- * Description:
- * Copyright:    Copyright (c) 2001
- * Company:
- * @author
- * @version 1.0
- */
-
-public class Gremlin extends Monster
+public class BloodOrc extends Monster
 {
 
-    public Gremlin()
+    public BloodOrc()
 	{
-		super("Gnarltooth the Gremlin", 70, 5, .8, .4, 15, 30, 20, 40);
+		super("Ugor the Cheifton of BloodOrc Clan", 165, 3, .8, .3, 5, 50, 5, 50);
 
     }//end constructor
 
@@ -27,4 +17,4 @@ public class Gremlin extends Monster
 	}//end override of attack
 
 
-}//end class Gremlin
+}//end class 

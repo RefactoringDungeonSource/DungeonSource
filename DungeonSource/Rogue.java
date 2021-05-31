@@ -1,24 +1,12 @@
 
 
-/**
- * Title:
- * Description:
- * Copyright:    Copyright (c) 2001
- * Company:
- * @author
- * @version 1.0
- */
-
-
-
-
-public class Warrior extends Hero
+public class Rogue extends Hero
 {
 
-    public Warrior()
+    public Rogue()
 	{
 
-		super("Warrior", 125, 4, .8, 35, 60, .2);
+		super("Rogue", 125, 4, .8, 35, 60, .2);
 
 
     }//end constructor
@@ -29,13 +17,13 @@ public class Warrior extends Hero
 		if (Math.random() <= .4)
 		{
 			int blowPoints = (int)(Math.random() * 76) + 100;
-			System.out.println(CharacterValues.getName() + " lands a CRUSHING BLOW for " + blowPoints
+			System.out.println(CharacterValues.getName() + " lands a thrusting stab for " + blowPoints
 								+ " damage!");
 			opponent.subtractHitPoints(blowPoints);
 		}//end blow succeeded
 		else
 		{
-			System.out.println(CharacterValues.getName() + " failed to land a crushing blow");
+			System.out.println(CharacterValues.getName() + " failed to land a blow ");
 			System.out.println();
 		}//blow failed
 
@@ -43,7 +31,7 @@ public class Warrior extends Hero
 
 	public void attack(DungeonCharacter opponent)
 	{
-		System.out.println(CharacterValues.getName() + " swings a mighty sword at " +
+		System.out.println(CharacterValues.getName() + " swipes with dagger at  " +
 							opponent.CharacterValues.getName() + ":");
 		super.attack(opponent);
 	}//end override of attack method
@@ -60,7 +48,7 @@ public class Warrior extends Hero
 		do
 		{
 		    System.out.println("1. Attack Opponent");
-		    System.out.println("2. Crushing Blow on Opponent");
+		    System.out.println("2. Thrusting Stab");
 		    System.out.print("Choose an option: ");
 		    choice = Keyboard.readInt();
 

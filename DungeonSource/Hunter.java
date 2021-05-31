@@ -9,12 +9,12 @@
  * @version 1.0
  */
 
-public class Thief extends Hero
+public class Hunter extends Hero
 {
 
-    public Thief()
+    public Hunter()
 	{
-		super("Thief", 75, 6, .8, 20, 40, .5);
+		super("Hunteress", 75, 6, .8, 20, 40, .5);
 
 
 
@@ -25,7 +25,7 @@ public class Thief extends Hero
 		double surprise = Math.random();
 		if (surprise <= .4)
 		{
-			System.out.println("Surprise attack was successful!\n" +
+			System.out.println("Surprise bow shot was successful!\n" +
 					CharacterValues.getName() + " gets an additional turn.");
 			numTurns++;
 			attack(opponent);
