@@ -20,7 +20,7 @@ public class DecayingWolf extends Monster
 
 	public void attack(DungeonCharacter opponent)
 	{
-		System.out.println(CharacterValues.getName() + " slices his rusty blade at " +
+		System.out.println(CharacterValues.getName() + " bites with his decaying mouth at " +
 							opponent.CharacterValues.getName() + ":");
 		super.attack(opponent);
 
