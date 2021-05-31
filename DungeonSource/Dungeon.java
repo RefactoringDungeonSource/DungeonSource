@@ -72,9 +72,9 @@ this task
 		Hero theHero;
 
 		System.out.println("Choose a hero:\n" +
-					       "1. Warrior\n" +
-						   "2. Sorceress\n" +
-						   "3. Thief");
+					       "1. Rogue\n" +
+						   "2. Paladin\n" +
+						   "3. Hunter");
 		choice = Keyboard.readInt();
 
 		switch(choice)
@@ -85,7 +85,7 @@ this task
 
 			case 3: return new Hunter();
 
-			default: System.out.println("invalid choice, returning Thief");
+			default: System.out.println("invalid choice, returning Hunter");
 				     return new Hunter();
 		}//end switch
 	}//end chooseHero method
@@ -102,14 +102,14 @@ a polymorphic reference (Monster) to accomplish this task.
 
 		switch(choice)
 		{
-			case 1: return new Ogre();
+			case 1: return new Dragon();
 
-			case 2: return new Gremlin();
+			case 2: return new BloodOrc();
 
-			case 3: return new Skeleton();
+			case 3: return new DecayingWolf();
 
-			default: System.out.println("invalid choice, returning Skeleton");
-				     return new Skeleton();
+			default: System.out.println("invalid choice, returning DecayingWolf");
+				     return new DecayingWolf();
 		}//end switch
 	}//end generateMonster method
 
