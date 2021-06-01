@@ -70,24 +70,46 @@ this task
 	{
 		int choice;
 		Hero theHero;
+		boolean answer = true;
+		while(answer) {
+			System.out.println("Choose a hero:\n" +
+						"1. Rogue\n" +
+						"2. Paladin\n" +
+						"3. Hunter");
+			choice = Keyboard.readInt();
 
-		System.out.println("Choose a hero:\n" +
-					       "1. Rogue\n" +
-						   "2. Paladin\n" +
-						   "3. Hunter");
-		choice = Keyboard.readInt();
+			switch(choice)
+			{
+				case 1: return new Rogue();
 
-		switch(choice)
-		{
-			case 1: return new Rogue();
+				case 2: return new Paladin();
 
-			case 2: return new Paladin();
+				case 3: return new Hunter();
 
-			case 3: return new Hunter();
+				default: 
+					System.out.println("Invalid choice, Please select a valid input from the menu.");
+					boolean repeat = true;
+					while(repeat) {
+						System.out.println("Choose a hero:\n" +
+									"1. Rogue\n" +
+									"2. Paladin\n" +
+									"3. Hunter");
+						choice = Keyboard.readInt();
+						switch(choice) {
+							case 1: return new Rogue();
 
-			default: System.out.println("invalid choice, returning Hunter");
-				     return new Hunter();
-		}//end switch
+							case 2: return new Paladin();
+
+							case 3: return new Hunter();
+							
+							default:
+								System.out.println("Invalid choice, Please select a valid input from the menu.");
+								repeat = true;
+						}
+					}
+			}					     
+		}
+		return null;
 	}//end chooseHero method
 
 /*-------------------------------------------------------------------
@@ -106,10 +128,7 @@ a polymorphic reference (Monster) to accomplish this task.
 
 			case 2: return new BloodOrc();
 
-			case 3: return new DecayingWolf();
-
-			default: System.out.println("invalid choice, returning DecayingWolf");
-				     return new DecayingWolf();
+			default: return new DecayingWolf();
 		}//end switch
 	}//end generateMonster method
 
