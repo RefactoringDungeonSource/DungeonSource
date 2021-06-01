@@ -1,4 +1,7 @@
-package dungeonCharacters;
+package Monsters;
+
+import dungeonCharacters.DungeonCharacter;
+
 /**
  * Title:
  * Description:

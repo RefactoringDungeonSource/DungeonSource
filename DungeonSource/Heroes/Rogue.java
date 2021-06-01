@@ -1,4 +1,7 @@
-package dungeonCharacters;
+package Heroes;
+
+import dungeonCharacters.DungeonCharacter;
+
 public class Rogue extends Hero
 {
 

@@ -1,4 +1,7 @@
-package dungeonCharacters;
+package Heroes;
+
+import Keyboard.Keyboard;
+import dungeonCharacters.DungeonCharacter;
 
 /**
  * Title: Hero.java

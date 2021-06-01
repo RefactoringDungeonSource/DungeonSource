@@ -1,4 +1,6 @@
-package dungeonCharacters;
+package Monsters;
+
+import dungeonCharacters.DungeonCharacter;
 
 /*
  * monster choice addition of the dragon class.

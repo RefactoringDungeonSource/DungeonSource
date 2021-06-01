@@ -1,4 +1,6 @@
-package dungeonCharacters;
+package Monsters;
+
+import dungeonCharacters.DungeonCharacter;
 
 public class BloodOrc extends Monster
 {
