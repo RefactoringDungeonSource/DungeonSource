@@ -166,52 +166,6 @@ public class Keyboard
    }
 
    //-----------------------------------------------------------------
-   //  Returns a space-delimited substring (a word) read from
-   //  standard input.
-   //-----------------------------------------------------------------
-   public static String readWord()
-   {
-      String token;
-      try
-      {
-         token = getNextToken();
-      }
-      catch (Exception exception)
-      {
-         error ("Error reading String data, null value returned.");
-         token = null;
-      }
-      return token;
-   }
-
-   //-----------------------------------------------------------------
-   //  Returns a boolean read from standard input.
-   //-----------------------------------------------------------------
-   public static boolean readBoolean()
-   {
-      String token = getNextToken();
-      boolean bool;
-      try
-      {
-         if (token.toLowerCase().equals("true"))
-            bool = true;
-         else if (token.toLowerCase().equals("false"))
-            bool = false;
-         else
-         {
-            error ("Error reading boolean data, false value returned.");
-            bool = false;
-         }
-      }
-      catch (Exception exception)
-      {
-         error ("Error reading boolean data, false value returned.");
-         bool = false;
-      }
-      return bool;
-   }
-
-   //-----------------------------------------------------------------
    //  Returns a character read from standard input.
    //-----------------------------------------------------------------
    public static char readChar()
@@ -256,60 +210,4 @@ public class Keyboard
       return value;
    }
 
-   //-----------------------------------------------------------------
-   //  Returns a long integer read from standard input.
-   //-----------------------------------------------------------------
-   public static long readLong()
-   {
-      String token = getNextToken();
-      long value;
-      try
-      {
-         value = Long.parseLong (token);
-      }
-      catch (Exception exception)
-      {
-         error ("Error reading long data, MIN_VALUE value returned.");
-         value = Long.MIN_VALUE;
-      }
-      return value;
-   }
-
-   //-----------------------------------------------------------------
-   //  Returns a float read from standard input.
-   //-----------------------------------------------------------------
-   public static float readFloat()
-   {
-      String token = getNextToken();
-      float value;
-      try
-      {
-         value = Float.parseFloat(token);
-      }
-      catch (Exception exception)
-      {
-         error ("Error reading float data, NaN value returned.");
-         value = Float.NaN;
-      }
-      return value;
-   }
-
-   //-----------------------------------------------------------------
-   //  Returns a double read from standard input.
-   //-----------------------------------------------------------------
-   public static double readDouble()
-   {
-      String token = getNextToken();
-      double value;
-      try
-      {
-         value = Double.parseDouble(token);
-      }
-      catch (Exception exception)
-      {
-         error ("Error reading double data, NaN value returned.");
-         value = Double.NaN;
-      }
-      return value;
-   }
 }
