@@ -34,7 +34,7 @@ public class CharacterValues {
 		
 	}
 	
-	public boid setHealth() {
+	public void setHealth(int health) {
 		this.health = health;
 		
 	}
