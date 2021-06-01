@@ -13,8 +13,8 @@
 
 public class Paladin extends Hero
 {
-	public final int MIN_ADD = 25;
-	public final int MAX_ADD = 50;
+	private final int MIN_ADD = 25;
+	private final int MAX_ADD = 50;
 	private int timesHealed = 0;
 
 //-----------------------------------------------------------------
@@ -36,7 +36,7 @@ public class Paladin extends Hero
 		addhealth(health);
 		System.out.println(CharacterValues.getName() + " added [" + health + "] points.\n"
 							+ "Total hit points remaining are: "
-							+ CharacterValues.health);
+							+ CharacterValues.getHealth());
 		 System.out.println();
 
     }//end increaseHitPoints method
