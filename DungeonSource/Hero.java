@@ -115,12 +115,28 @@ This method is called by: external sources
 	public void battleChoices(DungeonCharacter opponent)
 	{
 	    numTurns = CharacterValues.getAttackSpeed()/opponent.CharacterValues.getAttackSpeed();
-
+	
 		if (numTurns == 0)
 			numTurns++;
-
+	
 		System.out.println("Number of turns this round is: " + numTurns);
-
+	    
 	}//end battleChoices
+
+	public int moveSelector() {
+		
+	    System.out.print("Choose an option: ");
+		int choice = Keyboard.readInt();
+	    
+	    if (choice < 3) {
+	    	return choice;
+	    	
+	    }
+	    
+	    else {
+			return 2;
+	
+	    }
+	}
 
 }//end Hero class

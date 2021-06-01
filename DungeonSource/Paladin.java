@@ -48,35 +48,35 @@ public class Paladin extends Hero
 		super.attack(opponent);
 	}//end override of attack method
 
-//-----------------------------------------------------------------
+	//-----------------------------------------------------------------
     public void battleChoices(DungeonCharacter opponent)
 	{
+    	
+    	
+
 		super.battleChoices(opponent);
-		int choice;
 
 		do
 		{
 		    System.out.println("1. Attack Opponent");
 		    System.out.println("2. Increase Health");
-		    System.out.print("Choose an option: ");
-		    choice = Keyboard.readInt();
-
-		    switch (choice)
-		    {
-			    case 1: attack(opponent);
-			        break;
-			    case 2: increaseHealth();
-			        break;
-			    default:
-			        System.out.println("invalid choice!");
-		    }//end switch
-
+		    
+		    if(moveSelector() == 1) {
+		    	attack(opponent);
+		    	
+		    }
+		    
+		    else {
+		    	increaseHealth();
+		    	
+		    }
+		    
 			numTurns--;
-		    if (numTurns > 0)
+			if (numTurns > 0)
 			    System.out.println("Number of turns remaining is: " + numTurns);
 
-		} while(numTurns > 0 && CharacterValues.health > 0 && opponent.CharacterValues.getHealth() > 0);
+		} while(numTurns > 0);
 
-    }//end overridden method
-
+    }//end battleChoices method
+    
 }//end class

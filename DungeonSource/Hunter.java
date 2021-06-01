@@ -42,34 +42,32 @@ public class Hunter extends Hero
 	}//end surpriseAttack method
 
 
-    public void battleChoices(DungeonCharacter opponent)
-	{
-		super.battleChoices(opponent);
-		int choice;
-
-
-		do
+	   public void battleChoices(DungeonCharacter opponent)
 		{
-		    System.out.println("1. Attack Opponent");
-		    System.out.println("2. Pet Attack");
-		    System.out.print("Choose an option: ");
-		    choice = Keyboard.readInt();
 
-		    switch (choice)
-		    {
-			    case 1: attack(opponent);
-			        break;
-			    case 2: surpriseAttack(opponent);
-			        break;
-			    default:
-			        System.out.println("invalid choice!");
-		    }//end switch
+			super.battleChoices(opponent);
 
-			numTurns--;
-			if (numTurns > 0)
-			    System.out.println("Number of turns remaining is: " + numTurns);
+			do
+			{
+			    System.out.println("1. Attack Opponent");
+			    System.out.println("2. Pet Attack");
+			    
+			    if(moveSelector() == 1) {
+			    	attack(opponent);
+			    	
+			    }
+			    
+			    else {
+			    	surpriseAttack(opponent);
+			    	
+			    }
+			    
+				numTurns--;
+				if (numTurns > 0)
+				    System.out.println("Number of turns remaining is: " + numTurns);
 
-		} while(numTurns > 0);
+			} while(numTurns > 0);
 
-    }
-}
+	    }//end battleChoices method
+
+	}

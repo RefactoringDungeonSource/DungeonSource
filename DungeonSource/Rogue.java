@@ -41,7 +41,6 @@ public class Rogue extends Hero
 
     public void battleChoices(DungeonCharacter opponent)
 	{
-		int choice;
 
 		super.battleChoices(opponent);
 
@@ -49,19 +48,17 @@ public class Rogue extends Hero
 		{
 		    System.out.println("1. Attack Opponent");
 		    System.out.println("2. Thrusting Stab");
-		    System.out.print("Choose an option: ");
-		    choice = Keyboard.readInt();
-
-		    switch (choice)
-		    {
-			    case 1: attack(opponent);
-			        break;
-			    case 2: crushingBlow(opponent);
-			        break;
-			    default:
-			        System.out.println("invalid choice!");
-		    }//end switch
-
+		    
+		    if(moveSelector() == 1) {
+		    	attack(opponent);
+		    	
+		    }
+		    
+		    else {
+		    	crushingBlow(opponent);
+		    	
+		    }
+		    
 			numTurns--;
 			if (numTurns > 0)
 			    System.out.println("Number of turns remaining is: " + numTurns);
@@ -69,5 +66,5 @@ public class Rogue extends Hero
 		} while(numTurns > 0);
 
     }//end battleChoices method
-
+    
 }//end Hero class
