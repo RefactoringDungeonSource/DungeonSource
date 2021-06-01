@@ -70,7 +70,7 @@ This method is called by: heal method of monsters and Sorceress
 			System.out.println("Hitpoint amount must be positive.");
 		else
 		{
-			CharacterValues.health += health;
+			CharacterValues.setHealth(CharacterValues.getHealth() + health);
 			//System.out.println("Remaining Hit Points: " + health);
 
 		}
@@ -93,19 +93,18 @@ This method is called by: overridden versions in Hero and Monster
 			System.out.println("Hitpoint amount must be positive.");
 		else if (health >0)
 		{
-			CharacterValues.health -= health;
-			if (CharacterValues.health < 0)
-				CharacterValues.health = 0;
+			CharacterValues.setHealth(CharacterValues.getHealth() - health);
+			if (CharacterValues.getHealth() < 0)
+				CharacterValues.setHealth(0);
 			System.out.println(CharacterValues.getName() + " hit " +
 								" for <" + health + "> points damage.");
 			System.out.println(CharacterValues.getName() + " now has " +
-							CharacterValues.health + " hit points remaining.");
+							CharacterValues.getHealth() + " hit points remaining.");
 			System.out.println();
 		}//end else if
 
-		if (CharacterValues.health == 0)
+		if (CharacterValues.getHealth() == 0)
 			System.out.println(CharacterValues.getName() + " has been killed :-(");
-
 
 	}//end method
 
@@ -120,7 +119,7 @@ This method is called by: unknown (intended for external use)
 ---------------------------------------------------------*/
     public boolean isAlive()
 	{
-	  return (CharacterValues.health > 0);
+	  return (CharacterValues.getHealth() > 0);
 	}//end isAlive method
 
 /*-------------------------------------------------------
@@ -140,12 +139,12 @@ hero classes and externally
 		boolean canAttack;
 		int damage;
 
-		canAttack = Math.random() <= CharacterValues.chanceToHit;
+		canAttack = Math.random() <= CharacterValues.getChanceToHit();
 
 		if (canAttack)
 		{
-			damage = (int)(Math.random() * (CharacterValues.damageMax - CharacterValues.damageMin + 1))
-						+ CharacterValues.damageMin ;
+			damage = (int)(Math.random() * (CharacterValues.getDamageMax() - CharacterValues.getDamageMin() + 1))
+						+ CharacterValues.getDamageMin() ;
 			opponent.subtractHealth(damage);
 
 
@@ -162,11 +161,6 @@ hero classes and externally
 
 	}//end attack method
 
-
-
-
 //-----------------------------------------------------------------
-
-
 
 }//end class Character
