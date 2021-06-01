@@ -69,7 +69,6 @@ this task
 	public static Hero chooseHero()
 	{
 		int choice;
-		Hero theHero;
 		boolean answer = true;
 		while(answer) {
 			System.out.println("Choose a hero:\n" +
