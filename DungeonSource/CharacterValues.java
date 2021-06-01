@@ -34,8 +34,8 @@ public class CharacterValues {
 		
 	}
 	
-	public int getHealth() {
-		return this.health;
+	public boid setHealth() {
+		this.health = health;
 		
 	}
 	
