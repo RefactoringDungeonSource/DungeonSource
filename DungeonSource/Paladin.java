@@ -15,6 +15,7 @@ public class Paladin extends Hero
 {
 	public final int MIN_ADD = 25;
 	public final int MAX_ADD = 50;
+	private int timesHealed = 0;
 
 //-----------------------------------------------------------------
 
@@ -52,7 +53,6 @@ public class Paladin extends Hero
     public void battleChoices(DungeonCharacter opponent)
 	{
     	
-    	
 
 		super.battleChoices(opponent);
 
@@ -60,14 +60,24 @@ public class Paladin extends Hero
 		{
 		    System.out.println("1. Attack Opponent");
 		    System.out.println("2. Increase Health");
+		    int move = moveSelector();
 		    
-		    if(moveSelector() == 1) {
+		    if(move == 1) {
 		    	attack(opponent);
 		    	
 		    }
 		    
-		    else {
+		    
+		    else if (move == 2 && timesHealed < 4) {
 		    	increaseHealth();
+		    	timesHealed++;
+		    	
+		    }
+		    
+		    
+		    else {
+		    	System.out.println("You've run out of healing spells! Attacking Instead");
+		    	attack(opponent);
 		    	
 		    }
 		    
