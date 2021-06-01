@@ -1,3 +1,4 @@
+package dungeonCharacters;
 
 public class CharacterValues {
 	

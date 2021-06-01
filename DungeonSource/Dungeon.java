@@ -1,3 +1,6 @@
+import dungeonCharacters.*;
+
+
 /**
  * Title: Dungeon.java
  *

@@ -1,4 +1,4 @@
-
+package dungeonCharacters;
 
 /**
  * Title: Hero.java

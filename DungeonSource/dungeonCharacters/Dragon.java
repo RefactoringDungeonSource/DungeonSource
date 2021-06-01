@@ -1,4 +1,4 @@
-
+package dungeonCharacters;
 
 /*
  * monster choice addition of the dragon class.

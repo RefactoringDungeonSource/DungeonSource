@@ -1,3 +1,4 @@
+package dungeonCharacters;
 
 //********************************************************************
 //  Keyboard.java       Author: Lewis and Loftus

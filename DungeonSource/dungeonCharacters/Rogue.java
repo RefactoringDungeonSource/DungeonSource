@@ -1,5 +1,4 @@
-
-
+package dungeonCharacters;
 public class Rogue extends Hero
 {
 
