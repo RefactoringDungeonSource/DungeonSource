@@ -63,8 +63,8 @@ public class Dungeon
 
 		do
 		{
-		    Hero theHero = chooseHero();
-		    Monster theMonster = generateMonster();
+			Hero theHero = chooseHero();
+		    	Monster theMonster = generateMonster();
 			battle(theHero, theMonster);
 
 		} while (playAgain());
@@ -80,7 +80,6 @@ this task
 	{
 		int choice = -1;
 		boolean answer = true;
-	
 		while(answer) {
 			System.out.println("Choose a hero:\n" +
 						"1. Rogue\n" +
@@ -94,7 +93,7 @@ this task
 			}
 			
 		}
-		return HeroFactory.createHero(choice);
+		return FactoryProducer.getFactory("Hero").createHero(choice);
 	}//end chooseHero method
 
 /*-------------------------------------------------------------------
@@ -103,18 +102,7 @@ a polymorphic reference (Monster) to accomplish this task.
 ---------------------------------------------------------------------*/
 	public static Monster generateMonster()
 	{
-		int choice;
-
-		choice = (int)(Math.random() * 3) + 1;
-
-		switch(choice)
-		{
-			case 1: return new Dragon();
-
-			case 2: return new BloodOrc();
-
-			default: return new DecayingWolf();
-		}//end switch
+		return FactoryProducer.getFactory("Monster").createMonster();
 	}//end generateMonster method
 
 /*-------------------------------------------------------------------
