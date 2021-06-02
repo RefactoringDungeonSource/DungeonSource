@@ -32,15 +32,10 @@ package dungeonCharacters;
  * @version 1.0
  */
 
-public abstract class DungeonCharacter implements Comparable<Object>
+public abstract class DungeonCharacter
 {
 	
 	public CharacterValues CharacterValues;
-
-	public int compareTo(Object o)
-	{
-		return 1;
-	}
 
 //-----------------------------------------------------------------
 //explicit constructor to initialize instance variables -- it is called
