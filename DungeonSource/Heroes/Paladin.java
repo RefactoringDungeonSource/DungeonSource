@@ -52,6 +52,7 @@ public class Paladin extends Hero
 	}//end override of attack method
 
 	//-----------------------------------------------------------------
+	@Override
     public void battleChoices(DungeonCharacter opponent)
 	{
     	

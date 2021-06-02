@@ -43,7 +43,7 @@ public class Hunter extends Hero
 
 	}//end surpriseAttack method
 
-
+	@Override
 	   public void battleChoices(DungeonCharacter opponent)
 		{
 
