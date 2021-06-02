@@ -17,10 +17,8 @@ public class MonsterFactory extends AbstractFactory {
 
 			case 2: return new DecayingWolf();
 
-			case 3: return new Dragon();
-
-			default: System.out.println("invalid choice, returning Skeleton");
-				     return new Dragon();
+			default: 
+				return new Dragon();
 		}
 	}
 
