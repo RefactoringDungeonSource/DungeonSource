@@ -21,8 +21,9 @@ import dungeonCharacters.DungeonCharacter;
 					 double chanceToBlock)
 	  public void readName()
 	  public boolean defend()
-	  public void subtracthealth(int health)
+	  public void subtractHealth(int health)
 	  public void battleChoices(DungeonCharacter opponent)
+	  public int moveSelector()
 
  * Copyright:    Copyright (c) 2001
  * Company:
@@ -106,8 +107,7 @@ public void subtractHealth(int health)
 /*-------------------------------------------------------
 battleChoices will be overridden in derived classes.  It computes the
 number of turns a hero will get per round based on the opponent that is
-being fought.  The number of turns is reported to the user.  This stuff might
-go better in another method that is invoked from this one...
+being fought.  The number of turns is reported to the user.
 
 Receives: opponent
 Returns: nothing
@@ -125,7 +125,10 @@ This method is called by: external sources
 		System.out.println("Number of turns this round is: " + numTurns);
 	    
 	}//end battleChoices
-
+	
+	/* MoveSelector reads the users input and decides whether they 
+	 	are using their primary or special move. 
+	 	It is replacing the previous switch. 					*/
 	public int moveSelector() {
 		
 	    System.out.print("Choose an option: ");
@@ -140,6 +143,7 @@ This method is called by: external sources
 			return 2;
 	
 	    }
+	    
 	}
 
 }//end Hero class

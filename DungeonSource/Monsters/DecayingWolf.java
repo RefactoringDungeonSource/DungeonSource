@@ -2,15 +2,7 @@ package Monsters;
 
 import dungeonCharacters.DungeonCharacter;
 
-/**
- * Title:
- * Description:
- * Copyright:    Copyright (c) 2001
- * Company:
- * @author
- * @version 1.0
- */
-
+// New monster class DecayingWolf
 public class DecayingWolf extends Monster
 {
 
@@ -27,6 +19,5 @@ public class DecayingWolf extends Monster
 		super.attack(opponent);
 
 	}//end override of attack
-
 
 }//end class DecayingWolf

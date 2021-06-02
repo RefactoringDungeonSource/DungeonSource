@@ -2,6 +2,7 @@ package dungeonCharacters;
 
 public class CharacterValues {
 	
+	// initialize variables for the dungeon character
 	private String name;
 	private int attackSpeed;
 	private double chanceToHit;
@@ -19,10 +20,15 @@ public class CharacterValues {
 		this.damageMin = damageMin;
 		this.damageMax = damageMax;
 
-		}
+	}
+	
+	//-------------------------------------
+	// Setters and Getters for the variables
+	//-------------------------------------
 	
 	public String getName() {
 		return this.name;
+		
 	}
 
 	public void setName(String readString) {
@@ -47,26 +53,32 @@ public class CharacterValues {
 	
 	public double getChanceToHit() {
 		return chanceToHit;
+		
 	}
 
 	public void setChanceToHit(double chanceToHit) {
 		this.chanceToHit = chanceToHit;
+		
 	}
 
 	public int getDamageMax() {
 		return damageMax;
+		
 	}
 
 	public void setDamageMax(int damageMax) {
 		this.damageMax = damageMax;
+		
 	}
 
 	public int getDamageMin() {
 		return damageMin;
+		
 	}
 
 	public void setDamageMin(int damageMin) {
 		this.damageMin = damageMin;
+		
 	}
 
 }

@@ -4,11 +4,8 @@ import Monsters.Monster;
 import dungeonCharacters.FactoryProducer;
 
 
-
-
-/**
- * Title: Dungeon.java
- *
+/* Team 11 -- Trace Wynecoop, Hieu Tran, Erick Vargas, Arthur Wallace, Alex Vanchu	
+ * CSCD212
  * Description: Driver file for Heroes and Monsters project
  *
  * Copyright:    Copyright (c) 2001
@@ -49,7 +46,6 @@ import dungeonCharacters.FactoryProducer;
   3.  Allow the hero to battle the monster
 
   Once a battle concludes, the user has the option of repeating the above
-
 */
 public class Dungeon
 {
@@ -93,7 +89,7 @@ this task
 
 /*-------------------------------------------------------------------
 generateMonster randomly selects a Monster and returns it.  It utilizes
-a polymorphic reference (Monster) to accomplish this task.
+the factory pattern to accomplish this.
 ---------------------------------------------------------------------*/
 	public static Monster generateMonster()
 	{
@@ -152,6 +148,5 @@ user has the option of quitting.
 			System.out.println("Quitters never win ;-)");
 
 	}//end battle method
-
 
 }//end Dungeon class

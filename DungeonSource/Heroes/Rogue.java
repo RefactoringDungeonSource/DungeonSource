@@ -4,16 +4,14 @@ import dungeonCharacters.DungeonCharacter;
 
 public class Rogue extends Hero
 {
-
+	
     public Rogue()
 	{
-
 		super("Rogue", 125, 4, .8, 35, 60, .2);
-
-
+		
     }//end constructor
 
-
+    // Rogue's special move
 	public void crushingBlow(DungeonCharacter opponent)
 	{
 		if (Math.random() <= .4)
@@ -22,24 +20,27 @@ public class Rogue extends Hero
 			System.out.println(CharacterValues.getName() + " lands a thrusting stab for " + crushingBlowChance
 								+ " damage!");
 			opponent.subtractHealth(crushingBlowChance);
+			
 		}//end blow succeeded
 		else
 		{
 			System.out.println(CharacterValues.getName() + " failed to land a blow ");
 			System.out.println();
+			
 		}//blow failed
 
 	}//end crushingBlow method
 
+	
 	public void attack(DungeonCharacter opponent)
 	{
 		System.out.println(CharacterValues.getName() + " swipes with dagger at  " +
 							opponent.CharacterValues.getName() + ":");
 		super.attack(opponent);
+		
 	}//end override of attack method
 
-
-
+	// Calls moveSelector to get user input to determine attack
 	@Override
     public void battleChoices(DungeonCharacter opponent)
 	{

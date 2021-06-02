@@ -17,15 +17,14 @@ public class Paladin extends Hero
 {
 	private final int MIN_ADD = 25;
 	private final int MAX_ADD = 50;
+	// Implemented to prevent Paladin from gaining infinite health
 	private int timesHealed = 0;
 
 //-----------------------------------------------------------------
 
 	    public Paladin()
 		{
-
 			super("Paladin", 175, 4, .5, 15, 30, .5);
-
 
 	    }//end constructor
 
@@ -49,14 +48,15 @@ public class Paladin extends Hero
 		System.out.println(CharacterValues.getName() + " casts holy light at " +
 							opponent.CharacterValues.getName() + ":");
 		super.attack(opponent);
+		
 	}//end override of attack method
 
 	//-----------------------------------------------------------------
+	// Uses moveSelector to determine which attack to call.
+	
 	@Override
     public void battleChoices(DungeonCharacter opponent)
 	{
-    	
-
 		super.battleChoices(opponent);
 
 		do

@@ -18,36 +18,38 @@ public class Hunter extends Hero
 	{
 		super("Hunteress", 75, 6, .8, 20, 40, .5);
 
-
-
     }//end constructor
-
+    
+    // Hunter's special move
+    // If hero tries to use a surprise attack this calculates the probability that it will land.
 	public void surpriseAttack(DungeonCharacter opponent)
 	{
 		double surprise = Math.random();
+		
 		if (surprise <= .4)
 		{
 			System.out.println("You pet was successful in his attack!\n" +
 					CharacterValues.getName() + " gets an additional turn.");
 			numTurns++;
 			attack(opponent);
+			
 		}//end surprise
 		else if (surprise >= .9)
 		{
 			System.out.println("Uh oh! " + opponent.CharacterValues.getName() + " saw you and" +
 								" blocked your attack!");
 		}
+		
 		else
 		    attack(opponent);
 
-
 	}//end surpriseAttack method
-
-	   @Override
-	   public void battleChoices(DungeonCharacter opponent)
-		{
-
-			super.battleChoices(opponent);
+	
+	// Calls either special or primary attack, moveSelector() is called to get input.
+	@Override
+	public void battleChoices(DungeonCharacter opponent)
+	{
+		super.battleChoices(opponent);
 
 			do
 			{
@@ -70,6 +72,6 @@ public class Hunter extends Hero
 
 			} while(numTurns > 0);
 
-	    }//end battleChoices method
+	}//end battleChoices method
 
-	}
+}

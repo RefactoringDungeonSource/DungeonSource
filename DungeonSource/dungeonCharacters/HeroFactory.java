@@ -6,7 +6,7 @@ import Heroes.Paladin;
 import Heroes.Rogue;
 import Monsters.Monster;
 
-
+// Factory pattern implementation to create Heros.
 public class HeroFactory extends AbstractFactory {
 	public Hero createHero(int inputValue) {
 		Hero hero = null;
@@ -29,8 +29,9 @@ public class HeroFactory extends AbstractFactory {
 		return hero;
 	}
 
-	
+// Will be implemented within MonsterFactory.java
 	public Monster createMonster() {
 		return null;
+		
 	}
 }

@@ -1,12 +1,10 @@
 package dungeonCharacters;
-/**
- * Title: DungeonCharacter.java
+/* Title: DungeonCharacter.java
  *
  * Description: Abstract Base class for inheritance hierarchy for a
  *              role playing game
  *
- *  class variables (all will be directly accessible from derived classes):
- *    name (name of character)
+ *  Class variables--------------------
  *    health (points of damage a character can take before killed)
  *    attackSpeed (how fast the character can attack)
  *    chanceToHit (chance an attack will strike the opponent)
@@ -14,22 +12,15 @@ package dungeonCharacters;
  *     opponent)
  *
  *  class methods (all are directly accessible by derived classes):
- *    DungeonCharacter(String name, int health, int attackSpeed,
-				     double chanceToHit, int damageMin, int damageMax)
-	  public String getName()
-	  public int gethealth()
-	  public int getAttackSpeed()
-	  public void addhealth(int health)
-	  public void subtracthealth(int health) -- this method will be
+ *    DungeonCharacter(String name, int health, int attackSpeed, double chanceToHit, int damageMin, int damageMax);
+ *    -> The variables are sent to CharacterValues.java where they are stored with the private modifier.
+
+	  public void addHealth(int health)
+	  public void subtractHealth(int health) -- this method will be
 	    overridden
 	  public boolean isAlive()
 	  public void attack(DungeonCharacter opponent) -- this method will be
 	    overridden
- *
- * Copyright:    Copyright (c) 2001
- * Company:
- * @author
- * @version 1.0
  */
 
 public abstract class DungeonCharacter
@@ -78,7 +69,7 @@ done in separate methods to make code more modular ;-)
 Receives: number of hit points to subtract
 Returns: nothing
 
-This method calls: nothing
+This method calls: CharacterValues setters and getters
 This method is called by: overridden versions in Hero and Monster
 ---------------------------------------------------------*/
 	public void subtractHealth(int health)
@@ -108,23 +99,24 @@ isAlive is used to see if a character is still alive by checking hit points
 Receives: nothing
 Returns: true is hero is alive, false otherwise
 
-This method calls: nothing
+This method calls: getHealth()
 This method is called by: unknown (intended for external use)
 ---------------------------------------------------------*/
     public boolean isAlive()
 	{
 	  return (CharacterValues.getHealth() > 0);
+	  
 	}//end isAlive method
 
 /*-------------------------------------------------------
 attack allows character to attempt attack on opponent.  First, chance to hit
 is considered.  If a hit can occur, then the damage is calculated based on
-character's damage range.  This damage is then applied to the opponenet.
+character's damage range.  This damage is then applied to the opponent.
 
 Receives: opponent being attacked
 Returns: nothing
 
-This method calls: Math.random(), subtracthealth()
+This method calls: Math.random(), subtractHealth()
 This method is called by: overridden versions of the method in monster and
 hero classes and externally
 ---------------------------------------------------------*/

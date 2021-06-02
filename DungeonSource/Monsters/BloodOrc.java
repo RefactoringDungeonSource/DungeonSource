@@ -2,6 +2,7 @@ package Monsters;
 
 import dungeonCharacters.DungeonCharacter;
 
+// New monster class BloodOrc
 public class BloodOrc extends Monster
 {
 
@@ -18,6 +19,5 @@ public class BloodOrc extends Monster
 		super.attack(opponent);
 
 	}//end override of attack
-
 
 }//end class 

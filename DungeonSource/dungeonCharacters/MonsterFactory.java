@@ -6,6 +6,8 @@ import Monsters.BloodOrc;
 import Monsters.DecayingWolf;
 import Monsters.Dragon;
 
+
+// Implements the MonsterFactory to create Monsters using the factory pattern
 public class MonsterFactory extends AbstractFactory {
 	public Monster createMonster()
 	{
@@ -21,7 +23,8 @@ public class MonsterFactory extends AbstractFactory {
 				return new Dragon();
 		}
 	}
-
+	
+	// See HeroFactory for implementation
 	@Override
 	public Hero createHero(int i) {
 		return null;

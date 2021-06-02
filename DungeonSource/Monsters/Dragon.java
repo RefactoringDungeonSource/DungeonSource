@@ -2,17 +2,13 @@ package Monsters;
 
 import dungeonCharacters.DungeonCharacter;
 
-/*
- * monster choice addition of the dragon class.
- */
-
+// New monster class Dragon
 public class Dragon extends Monster
 {
 
     public Dragon()
 	{
 		super("Draco the Dragon", 500, 4, .6, .1, 30, 75, 30, 50); 
-
 
     }//end constructor
 
