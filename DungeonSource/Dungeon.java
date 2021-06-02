@@ -17,18 +17,17 @@ import dungeonCharacters.FactoryProducer;
  *				-- Refactored names:
  *						-- Heroes:
  *							-- Rogue class previously Theif class.						Side Note: All Heroes
- *							-- Paladin class previously Sorcessor class					 and Monsters classes 
+ *							-- Paladin class previously Sorceress class					 and Monsters classes 
  *							-- Hunter class previously Warrior class.					 have been modified to
  *  					-- Monsters:													 fit current theme 
  *							-- BloodOrc class previously Ogre class.					 structure.
- *							-- DecayingWolf class previously Germlin class
- *							-- Dragon class previously Skelton class.
+ *							-- DecayingWolf class previously Gremlin class
+ *							-- Dragon class previously Skeleton class.
  *				
  *				-- hitPoints Variable refactored to Health.
  *				-- blowPoints variable refactored to crushingHitChance.
  *				-- keyboard file refactored: Replacing two deprecated methods for type casting
  *				-- CharacterValues class created: Updating old storage handling for data previously held in dataCharacter
- *				-- Refactored Dungeon file to fix warning created on implementing Comparable <object>
  *				-- Refactored Dungeon file methods:
  *                 chooseHero() - Created a loop to validate user input for the hero selection. 
  *				   Any values not within 1-3 will prompt the user to re-enter the value.
