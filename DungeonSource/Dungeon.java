@@ -61,13 +61,10 @@ public class Dungeon
     public static void main(String[] args)
 	{
 
-		Hero theHero;
-		Monster theMonster;
-
 		do
 		{
-		    theHero = chooseHero();
-		    theMonster = generateMonster();
+		    Hero theHero = chooseHero();
+		    Monster theMonster = generateMonster();
 			battle(theHero, theMonster);
 
 		} while (playAgain());
