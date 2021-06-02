@@ -7,6 +7,7 @@ import Monsters.BloodOrc;
 import Monsters.DecayingWolf;
 import Monsters.Dragon;
 import Monsters.Monster;
+import dungeonCharacters.HeroFactory;
 
 
 
@@ -80,47 +81,23 @@ this task
 ---------------------------------------------------------------------*/
 	public static Hero chooseHero()
 	{
-		int choice;
+		int choice = -1;
 		boolean answer = true;
+	
 		while(answer) {
 			System.out.println("Choose a hero:\n" +
 						"1. Rogue\n" +
 						"2. Paladin\n" +
 						"3. Hunter");
 			choice = Keyboard.readInt();
-
-			switch(choice)
-			{
-				case 1: return new Rogue();
-
-				case 2: return new Paladin();
-
-				case 3: return new Hunter();
-
-				default: 
-					System.out.println("Invalid choice, Please select a valid input from the menu.");
-					boolean repeat = true;
-					while(repeat) {
-						System.out.println("Choose a hero:\n" +
-									"1. Rogue\n" +
-									"2. Paladin\n" +
-									"3. Hunter");
-						choice = Keyboard.readInt();
-						switch(choice) {
-							case 1: return new Rogue();
-
-							case 2: return new Paladin();
-
-							case 3: return new Hunter();
-							
-							default:
-								System.out.println("Invalid choice, Please select a valid input from the menu.");
-								repeat = true;
-						}
-					}
-			}					     
+			if(choice > 0 && choice < 4) {
+				answer = false;
+			} else {
+				System.out.println("Invalid input. Please enter a value between 1 and 3.");
+			}
+			
 		}
-		return null;
+		return HeroFactory.createHero(choice);
 	}//end chooseHero method
 
 /*-------------------------------------------------------------------
