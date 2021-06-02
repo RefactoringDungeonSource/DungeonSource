@@ -16,7 +16,7 @@ public class MonsterFactory extends AbstractFactory {
 			case 1: return new BloodOrc();
 
 			case 2: return new DecayingWolf();
-
+			
 			default: 
 				return new Dragon();
 		}

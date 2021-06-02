@@ -12,15 +12,15 @@ public class HeroFactory extends AbstractFactory {
 		Hero hero = null;
 		if(inputValue == 1)
 		{
-			hero = new Paladin();
+			hero = new Rogue();
 		}
 		else if(inputValue == 2)
 		{
-			hero = new Hunter();
+			hero = new Paladin();
 		}
 		else if(inputValue == 3)
 		{
-			hero = new Rogue();
+			hero = new Hunter();
 		}
 		else
 		{
