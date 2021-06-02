@@ -40,7 +40,7 @@ public class Rogue extends Hero
 
 
 
-
+	@Override
     public void battleChoices(DungeonCharacter opponent)
 	{
 
