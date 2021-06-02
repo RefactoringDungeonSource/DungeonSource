@@ -8,7 +8,7 @@ import dungeonCharacters.FactoryProducer;
  * CSCD212
  * Description: Driver file for Heroes and Monsters project.
  * 					
- *		Refactor Prject:
+ *		Refactor Project:
  *			History:
  *				-- Created Abstract Factory class. 
  *				-- Created Factory Producer class.
