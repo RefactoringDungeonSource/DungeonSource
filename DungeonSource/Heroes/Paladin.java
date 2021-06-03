@@ -1,5 +1,9 @@
 package Heroes;
 
+
+
+
+
 import dungeonCharacters.DungeonCharacter;
 
 /**
@@ -21,10 +25,10 @@ public class Paladin extends Hero
 	private int timesHealed = 0;
 
 //-----------------------------------------------------------------
-
+	//lowered the health for paladin because he can heal himself
 	    public Paladin()
 		{
-			super("Paladin", 175, 4, .5, 15, 30, .5);
+			super("Paladin", 100, 4, .5, 15, 30, .5);
 
 	    }//end constructor
 
@@ -50,7 +54,12 @@ public class Paladin extends Hero
 		super.attack(opponent);
 		
 	}//end override of attack method
-
+//2nd and new attack 
+	public void backHand(DungeonCharacter opponent) {
+		System.out.println(CharacterValues.getName() + " back hands " +
+				opponent.CharacterValues.getName() + " and then fixes pinky ring:");
+super.attack(opponent);
+	}
 	//-----------------------------------------------------------------
 	// Uses moveSelector to determine which attack to call.
 	
@@ -61,8 +70,10 @@ public class Paladin extends Hero
 
 		do
 		{
+			System.out.println("0. BackHand");
 		    System.out.println("1. Attack Opponent");
 		    System.out.println("2. Increase Health");
+		    
 		    int move = moveSelector();
 		    
 		    if(move == 1) {
@@ -71,16 +82,22 @@ public class Paladin extends Hero
 		    }
 		    
 		    
-		    else if (move == 2 && timesHealed < 4) {
+		    //lowered the amount of times we can heal because he gets too much health self healing
+		    else if (move == 2 && timesHealed < 3) {
 		    	increaseHealth();
 		    	timesHealed++;
+		    	
+		    }
+		    else if (move == 0) {
+		    	backHand(opponent);
 		    	
 		    }
 		    
 		    
 		    else {
+		    	//when running out of spells i found it ideal to use his backhand to attack rather than an weapon
 		    	System.out.println("You've run out of healing spells! Attacking Instead");
-		    	attack(opponent);
+		    	backHand(opponent);
 		    	
 		    }
 		    

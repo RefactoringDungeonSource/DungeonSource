@@ -120,9 +120,10 @@ this task
 			System.out.println("Choose a hero:\n" +
 						"1. Rogue\n" +
 						"2. Paladin\n" +
-						"3. Hunter");
+						"3. Hunter\n"+
+						"4. GunSlinger");
 			choice = Keyboard.readInt();
-			if(choice > 0 && choice < 4) {
+			if(choice > 0 && choice < 5) {
 				answer = false;
 			} else {
 				System.out.println("Invalid input. Please enter a value between 1 and 3.");

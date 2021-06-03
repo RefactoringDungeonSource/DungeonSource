@@ -4,6 +4,7 @@ import Heroes.Hero;
 import Heroes.Hunter;
 import Heroes.Paladin;
 import Heroes.Rogue;
+import Heroes.gunSlinger;
 import Monsters.Monster;
 
 // Factory pattern implementation to create Heros.
@@ -21,6 +22,10 @@ public class HeroFactory extends AbstractFactory {
 		else if(inputValue == 3)
 		{
 			hero = new Hunter();
+		}
+		//new character gunSlinger by Erick
+		else if(inputValue == 4) {
+			hero = new gunSlinger();
 		}
 		else
 		{
