@@ -1,5 +1,5 @@
 
-# Team assignment - Refactor Dungeon Project 
+# Team Assignment - Refactor Dungeon Project 
 
 Assignment details:
 
