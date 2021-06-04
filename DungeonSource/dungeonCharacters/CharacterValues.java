@@ -1,5 +1,6 @@
 package dungeonCharacters;
 
+// Refactor #6 - Create class CharacterValues.
 public class CharacterValues {
 	
 	/* initialize variables for the dungeon character.
