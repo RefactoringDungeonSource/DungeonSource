@@ -28,7 +28,7 @@ public class Paladin extends Hero
 	//lowered the health for paladin because he can heal himself
 	    public Paladin()
 		{
-			super("Paladin", 100, 4, .5, 15, 30, .5);
+			super("Paladin", 100, 4, .5, 15, 30, .5); // Refactoring #12 - Changed hero health.
 
 	    }//end constructor
 
