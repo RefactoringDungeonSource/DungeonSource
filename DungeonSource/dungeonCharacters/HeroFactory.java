@@ -11,7 +11,7 @@ import Monsters.Monster;
 public class HeroFactory extends AbstractFactory {
 	public Hero createHero(int inputValue) {
 		Hero hero = null;
-		if(inputValue == 1)
+		if(inputValue == 1) // Refactoring #11 - Changed from switch to if/else.
 		{
 			hero = new Rogue();
 		}
