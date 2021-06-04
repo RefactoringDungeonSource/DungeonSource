@@ -83,7 +83,7 @@ super.attack(opponent);
 		    
 		    
 		    //lowered the amount of times we can heal because he gets too much health self healing
-		    else if (move == 2 && timesHealed < 3) {
+		    else if (move == 2 && timesHealed < 3) { //Refactoring #14
 		    	increaseHealth();
 		    	timesHealed++;
 		    	
@@ -97,7 +97,7 @@ super.attack(opponent);
 		    else {
 		    	//when running out of spells i found it ideal to use his backhand to attack rather than an weapon
 		    	System.out.println("You've run out of healing spells! Attacking Instead");
-		    	backHand(opponent);
+		    	backHand(opponent); // Refactoring #15
 		    	
 		    }
 		    
