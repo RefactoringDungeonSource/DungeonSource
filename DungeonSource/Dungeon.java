@@ -91,7 +91,7 @@ import dungeonCharacters.FactoryProducer;
 
   Once a battle concludes, the user has the option of repeating the above
 */
-public class Dungeon
+public class Dungeon // Refactoring #9 - Removed Comparable
 {
     public static void main(String[] args)
 	{
