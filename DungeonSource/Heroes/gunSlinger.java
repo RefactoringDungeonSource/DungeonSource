@@ -1,7 +1,7 @@
 package Heroes;
 import dungeonCharacters.DungeonCharacter;
 
-public class gunSlinger extends Hero{
+public class gunSlinger extends Hero{ // Refactoring #16 - New hero creation
 
     public gunSlinger() {
 	
