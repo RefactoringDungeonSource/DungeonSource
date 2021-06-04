@@ -17,7 +17,7 @@ public class MonsterFactory extends AbstractFactory {
 		{
 			case 1: return new BloodOrc();
 
-			case 2: return new DecayingWolf();
+			case 2: return new DecayingWolf();	// Refactoring #2, Remove duplication of object creation.
 			
 			default: 
 				return new Dragon();
