@@ -12,6 +12,7 @@ import java.util.*;
 /*
    Refactoring #4 - Update deprecated methods: swapped out Float.floatValue() for Float.parseFloat
                                                swapped out Double.doubleValue() for Double.parseDouble()
+   Refactoring #8 - Removed unneeded methods.
 */
 public class Keyboard
 {
