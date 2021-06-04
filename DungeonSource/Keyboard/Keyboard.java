@@ -9,7 +9,10 @@ package Keyboard;
 
 import java.io.*;
 import java.util.*;
-
+/*
+   Refactoring #4 - Update deprecated methods: swapped out Float.floatValue() for Float.parseFloat
+                                               swapped out Double.doubleValue() for Double.parseDouble()
+*/
 public class Keyboard
 {
    //*************  Error Handling Section  **************************
