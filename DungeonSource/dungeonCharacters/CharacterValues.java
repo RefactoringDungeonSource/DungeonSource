@@ -11,7 +11,7 @@ public class CharacterValues {
 	private double chanceToHit;
 	private int damageMin;
 	private int damageMax;
-	private int health;
+	private int health; // Refactor # 7 - Rename variables
 	
 	// explicit constructor to initialize instance variables
 	public CharacterValues(String name, int health, int attackSpeed, double chanceToHit, int damageMin, int damageMax) {
