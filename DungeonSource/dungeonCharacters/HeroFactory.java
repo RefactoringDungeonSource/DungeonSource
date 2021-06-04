@@ -25,7 +25,7 @@ public class HeroFactory extends AbstractFactory {
 		}
 		//new character gunSlinger by Erick
 		else if(inputValue == 4) {	// Refactoring #2, Remove duplication of object creation.
-			hero = new gunSlinger();
+			hero = new gunSlinger(); // Refactoring #17 - Added new Hero gunslinger
 		}
 		else
 		{
