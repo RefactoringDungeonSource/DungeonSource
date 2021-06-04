@@ -98,7 +98,7 @@ public class Dungeon // Refactoring #9 - Removed Comparable
 
 		do
 		{
-			Hero theHero = chooseHero();
+			Hero theHero = chooseHero(); // Refactoring #10 - Moved the object creation into the do...while loop.
 		    	Monster theMonster = generateMonster();
 			battle(theHero, theMonster);
 
