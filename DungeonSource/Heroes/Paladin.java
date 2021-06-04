@@ -55,7 +55,7 @@ public class Paladin extends Hero
 		
 	}//end override of attack method
 //2nd and new attack 
-	public void backHand(DungeonCharacter opponent) {
+	public void backHand(DungeonCharacter opponent) { // Refactoring #13 - Added a new attack.
 		System.out.println(CharacterValues.getName() + " back hands " +
 				opponent.CharacterValues.getName() + " and then fixes pinky ring:");
 super.attack(opponent);
