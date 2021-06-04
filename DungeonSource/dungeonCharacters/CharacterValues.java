@@ -2,7 +2,9 @@ package dungeonCharacters;
 
 public class CharacterValues {
 	
-	// initialize variables for the dungeon character
+	/* initialize variables for the dungeon character.
+	   Refactor #3 - Encapsulate by Changing variables from protected to private.
+	*/
 	private String name;
 	private int attackSpeed;
 	private double chanceToHit;
@@ -10,7 +12,7 @@ public class CharacterValues {
 	private int damageMax;
 	private int health;
 	
-	//explicit constructor to initialize instance variables
+	// explicit constructor to initialize instance variables
 	public CharacterValues(String name, int health, int attackSpeed, double chanceToHit, int damageMin, int damageMax) {
 
 		this.name = name;
