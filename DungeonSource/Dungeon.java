@@ -116,7 +116,7 @@ this task
 		int choice = -1;
 		boolean answer = true;
 		while(answer) {
-			System.out.println("Choose a hero:\n" +
+			System.out.println("Choose a hero:\n" + // Refactoring #18 - Change hero and monster names.
 						"1. Rogue\n" +
 						"2. Paladin\n" +
 						"3. Hunter\n"+
